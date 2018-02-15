@@ -49,6 +49,9 @@ export default [
     input: 'src/typeit.js',
     plugins: plugins.concat([
       uglify({
+        mangle: {
+          properties: true
+        },
         output: {
           comments: function(node, comment) {
             const text = comment.value
